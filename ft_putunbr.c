@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayhamdou <ayhamdou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 18:20:04 by ayhamdou          #+#    #+#             */
-/*   Updated: 2023/11/26 18:13:12 by ayhamdou         ###   ########.fr       */
+/*   Created: 2023/11/26 18:02:47 by ayhamdou          #+#    #+#             */
+/*   Updated: 2023/11/26 18:03:26 by ayhamdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned int n, char s) 
+int	ft_putunbr(unsigned int n)
 {
 	int		len;
-	char	*hex;
-	char	*hex_up;
+	char	c;
 
 	len = 0;
-	hex = "0123456789abcdef";
-	hex_up = "0123456789ABCDEF";
-	if (n >= 16)
+	if (n < 0)
 	{
-		len += ft_puthex(n / 16, s);
-		len += ft_puthex(n % 16, s);
+		len += ft_putchar('-');
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		len += ft_putunbr(n / 10);
+		len += ft_putunbr(n % 10);
 	}
 	else
 	{
-		if (s == 'x')
-			len += ft_putchar(hex[n]);
-		else if (s == 'X')
-			len += ft_putchar(hex_up[n]);
+		c = n + '0';
+		len += ft_putchar(c);
 	}
 	return (len);
 }
