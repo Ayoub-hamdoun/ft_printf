@@ -1,7 +1,9 @@
 #include "ft_printf.h"
+#include <limits.h>
 
 int main()
 {
-	char *p = 0x0;
-	printf("%%");
+	ft_printf("%d, %c\n", INT_MIN, 'k');
+	// ft_printf("%d\n", INT_MIN);
+	// ft_printf(NULL);
 }

@@ -6,13 +6,13 @@
 /*   By: ayhamdou <ayhamdou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 18:20:04 by ayhamdou          #+#    #+#             */
-/*   Updated: 2023/11/26 18:13:12 by ayhamdou         ###   ########.fr       */
+/*   Updated: 2023/12/01 17:38:10 by ayhamdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned int n, char s) 
+int	ft_puthex(unsigned int n, char s)
 {
 	int		len;
 	char	*hex;
