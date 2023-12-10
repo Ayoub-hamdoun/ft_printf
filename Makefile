@@ -6,7 +6,7 @@
 #    By: ayhamdou <ayhamdou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 18:06:45 by ayhamdou          #+#    #+#              #
-#    Updated: 2023/12/01 16:41:53 by ayhamdou         ###   ########.fr        #
+#    Updated: 2023/12/08 14:47:08 by ayhamdou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
 SRCS = ft_printf.c  ft_puthex.c  ft_putptr.c  ft_putunbr.c\
-		ft_putchar.c ft_putnbr.c  ft_putstr.c ft_printer.c
+		ft_putchar.c ft_putnbr.c  ft_putstr.c checker.c
 
 OBJS = $(SRCS:%.c=%.o) 
 
