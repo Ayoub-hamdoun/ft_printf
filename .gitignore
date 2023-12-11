@@ -7,4 +7,4 @@ test.*
 *.txt
 *.dSYM
 *.exe
-main.c
+./main.c
