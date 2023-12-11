@@ -6,7 +6,7 @@
 /*   By: ayhamdou <ayhamdou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 17:02:49 by ayhamdou          #+#    #+#             */
-/*   Updated: 2023/12/10 17:44:43 by ayhamdou         ###   ########.fr       */
+/*   Updated: 2023/12/10 18:10:52 by ayhamdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_printf(const char *str, ...)
 
 	if (!str)
 		return (0);
-	if (write(1, NULL, 0) == -1)
+	if (write(1, "stdout closed", 13) == -1)
 		return (-1);
 	i = 0;
 	va_start(args, str);

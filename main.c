@@ -1,9 +1,14 @@
 #include "ft_printf.h"
 #include <limits.h>
 
+int myf(int a)
+{
+	a++;
+	return(a);
+}
+
 int main()
 {
-	ft_printf("%d, %c\n", INT_MIN, 'k');
-	// ft_printf("%d\n", INT_MIN);
-	// ft_printf(NULL);
+	int n = 10;
+	int h = myf(n);
 }
